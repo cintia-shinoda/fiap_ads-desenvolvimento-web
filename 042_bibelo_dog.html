@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Bibelô - Dog</title>
+<link rel="stylesheet" type="text/css" href="layout.css">
+<script type="text/javascript" src="js/jquery-1.11.2.js"></script>
+<script>
+$(document).ready(function(){
+	if $("#sun").check(function(){
+		$("ol").append("<li>Sun</li>");
+	});
+	else if $("#rain").check(function(){
+		$("ol").append("<li>Rain</li>");
+	});
+	else{
+		$("ol").append("<li>Flood</li>");
+	});
+});
+</script>
+</head>
+
+<body class="weather_dog">
+	<div>
+		<header>
+			<img src="images/logoylw.png" alt="logo" width="200px">
+			<ul>
+				<li><a href="index.html">Home</a></li>
+				<li><a href="logIn.html">Log In</a></li>
+				<li><a href="signUp.html">Sign Up</a></li>
+				<li><a href="about.html">About</a></li>
+				<li><a href="contactUs.html">Contact Us</a></li>
+				<li><a href="index.html">Sign Out</a></li>
+			</ul>
+		</header>
+	</div>
+
+	<div id="dog">
+		<img src="characters/dog_happy.png" alt="dog" width=400px>
+	</div>
+
+	<div>
+		<p>How's the weather today?</p>
+	</div>
+
+	<div>
+		<img src="images/weather_sun.png" alt="sun" width=300px> 
+		<button value="sun" id="sun"></button>
+		<img src="images/weather_rain.png" alt="rain" width=300px> 
+		<button value="rain" id="rain"></button>
+		<img src="images/weather_flood.png" alt="flood" width=300px>
+		<button value="flood" id="flood"></button>
+	</div>
+
+	<div>
+		<ol>
+			<li>Weather List</li>
+		</ol>
+	</div>
+</body>
+</html>
